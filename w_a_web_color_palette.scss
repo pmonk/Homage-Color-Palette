@@ -1,0 +1,1837 @@
+// dart-sass (v1.6.2)
+
+// VARIABLES
+// Custom Color Palette
+
+$dark-brown: #432c17;
+$dark-red-brown: #572314;
+$dark-blue: #0f5478;
+$dark-gray-green: #4f5a50;
+$taupe: #745d3c;
+$burnt-sienna: #b1460f;
+$brown: #94612e;
+$purple-pink: #a66163;
+$medium-dark-blue: #4278bb;
+$warm-gray: #7a7a7a;
+$rose-madder: #da5652;
+$orange: #f54f1e;
+$cerulean-blue: #468dcb;
+$seafoam-green: #63a182;
+$medium-gray-green: #8f9a79;
+$raw-sienna: #ce8d38;
+$lime-green: #8bb354;
+$light-green: #7ec247;
+$light-blue: #82bcdb;
+$yellow-ochre: #ccb449;
+$cool-gray: #c7cde3;
+$eggshell-white: #e3dbb8;
+$naples-yellow: #f8e142;
+$peach: #f4debf;
+$white-smoke: #eaeaea;
+
+
+//---Use Hue Handles to change respective hues based on color wheel 0 to 360 degrees
+$analagous-accent-hue-handle: 60; // change this to adjust the accent hue of all the base colors, the default is 60, any number between 1 and 179 represents colors on the "top" part of a color wheel
+
+$analagous-highlight-hue-handle: 300; // change this to adjust the accent hue of all the base colors, the default is 300, any number between 180 and 359 represents colors on the "bottom" part of a color wheel
+
+$complementary-accent-hue-handle: 180; // change this to adjust the accent hue of all the base colors, the default is 180, any number between 1 and 179 represents colors on the "top" part of a color wheel
+
+$complementary-highlight-hue-handle: 180; // change this to adjust the accent hue of all the base colors, the default is 180, any number between 180 and 359 represents colors on the "bottom" part of a color wheel
+
+
+//--- Swatches
+//--- Monochrome dark brown
+$color-base: $dark-brown;
+$color-background: lighten($color-base, 40);
+$color-dark: darken($color-base, 20);
+$color-accent: saturate($color-base, 20);
+$color-highlight: lighten(saturate($color-base, 40),20);
+//--- Analogous dark brown
+$color-analogous-base: $dark-brown;
+$color-analogous-background: lighten($color-analogous-base, 40);
+$color-analogous-dark: darken($color-analogous-base, 20);
+$color-analogous-accent: saturate(adjust-color($color-analogous-base, $hue:$analagous-accent-hue-handle), 20);
+$color-analogous-highlight: lighten(saturate(adjust-color($color-analogous-base, $hue:$analagous-highlight-hue-handle), 40),20);
+//--- Complementary dark brown
+$color-complementary-base: $dark-brown;
+$color-complementary-background: lighten($color-complementary-base, 40);
+$color-complementary-dark: darken($color-complementary-base, 20);
+$color-complementary-accent: saturate(adjust-color($color-complementary-base, $hue:$complementary-accent-hue-handle), 20);
+$color-complementary-highlight: lighten(saturate(adjust-color($color-complementary-base, $hue:$complementary-highlight-hue-handle), 40),20);
+
+//--- Monochrome dark red brown
+$color-base-1: $dark-red-brown;
+$color-background-1: lighten($color-base-1, 40);
+$color-dark-1: darken($color-base-1, 20);
+$color-accent-1: saturate($color-base-1, 20);
+$color-highlight-1: lighten(saturate($color-base-1, 40),20);
+//--- Analogous dark brown
+$color-analogous-base-1: $dark-red-brown;
+$color-analogous-background-1: lighten($color-analogous-base-1, 40);
+$color-analogous-dark-1: darken($color-analogous-base-1, 20);
+$color-analogous-accent-1: saturate(adjust-color($color-analogous-base-1, $hue:$analagous-accent-hue-handle), 20);
+$color-analogous-highlight-1: lighten(saturate(adjust-color($color-analogous-base-1, $hue:$analagous-highlight-hue-handle), 40),20);
+//--- Complementary dark brown
+$color-complementary-base-1: $dark-red-brown;
+$color-complementary-background-1: lighten($color-complementary-base-1, 40);
+$color-complementary-dark-1: darken($color-complementary-base-1, 20);
+$color-complementary-accent-1: saturate(adjust-color($color-complementary-base-1, $hue:$complementary-accent-hue-handle), 20);
+$color-complementary-highlight-1: lighten(saturate(adjust-color($color-complementary-base-1, $hue:$complementary-highlight-hue-handle), 40),20);
+
+//--- Monochrome dark blue
+$color-base-2: $dark-blue;
+$color-background-2: lighten($color-base-2, 40);
+$color-dark-2: darken($color-base-2, 20);
+$color-accent-2: saturate($color-base-2, 20);
+$color-highlight-2: lighten(saturate($color-base-2, 40),20);
+//--- Analogous dark brown
+$color-analogous-base-2: $dark-blue;
+$color-analogous-background-2: lighten($color-analogous-base-2, 40);
+$color-analogous-dark-2: darken($color-analogous-base-2, 20);
+$color-analogous-accent-2: saturate(adjust-color($color-analogous-base-2, $hue:$analagous-accent-hue-handle), 20);
+$color-analogous-highlight-2: lighten(saturate(adjust-color($color-analogous-base-2, $hue:$analagous-highlight-hue-handle), 40),20);
+//--- Complementary dark brown
+$color-complementary-base-2: $dark-red-brown;
+$color-complementary-background-2: lighten($color-complementary-base-2, 40);
+$color-complementary-dark-2: darken($color-complementary-base-2, 20);
+$color-complementary-accent-2: saturate(adjust-color($color-complementary-base-2, $hue:$complementary-accent-hue-handle), 20);
+$color-complementary-highlight-2: lighten(saturate(adjust-color($color-complementary-base-2, $hue:$complementary-highlight-hue-handle), 40),20);
+
+//--- Monochrome dark gray green
+$color-base-3: $dark-gray-green;
+$color-background-3: lighten($color-base-3, 40);
+$color-dark-3: darken($color-base-3, 20);
+$color-accent-3: saturate($color-base-3, 20);
+$color-highlight-3: lighten(saturate($color-base-3, 40),20);
+//--- Analogous dark gray green
+$color-analogous-base-3: $dark-gray-green;
+$color-analogous-background-3: lighten($color-analogous-base-3, 40);
+$color-analogous-dark-3: darken($color-analogous-base-3, 20);
+$color-analogous-accent-3: saturate(adjust-color($color-analogous-base-3, $hue:$analagous-accent-hue-handle), 20);
+$color-analogous-highlight-3: lighten(saturate(adjust-color($color-analogous-base-3, $hue:$analagous-highlight-hue-handle), 40),20);
+//--- Complementary dark gray green
+$color-complementary-base-3: $dark-gray-green;
+$color-complementary-background-3: lighten($color-complementary-base-3, 40);
+$color-complementary-dark-3: darken($color-complementary-base-3, 20);
+$color-complementary-accent-3: saturate(adjust-color($color-complementary-base-3, $hue:$complementary-accent-hue-handle), 20);
+$color-complementary-highlight-3: lighten(saturate(adjust-color($color-complementary-base-3, $hue:$complementary-highlight-hue-handle), 40),20);
+
+//--- Monochrome Taupe
+$color-base-4: $taupe;
+$color-background-4: lighten($color-base-4, 40);
+$color-dark-4: darken($color-base-4, 20);
+$color-accent-4: saturate($color-base-4, 20);
+$color-highlight-4: lighten(saturate($color-base-4, 40),20);
+//--- Analogous Taupe
+$color-analogous-base-4: $taupe;
+$color-analogous-background-4: lighten($color-analogous-base-4, 40);
+$color-analogous-dark-4: darken($color-analogous-base-4, 20);
+$color-analogous-accent-4: saturate(adjust-color($color-analogous-base-4, $hue:$analagous-accent-hue-handle), 20);
+$color-analogous-highlight-4: lighten(saturate(adjust-color($color-analogous-base-4, $hue:$analagous-highlight-hue-handle), 40),20);
+//--- Complementary Taupe
+$color-complementary-base-4: $taupe;
+$color-complementary-background-4: lighten($color-complementary-base-4, 40);
+$color-complementary-dark-4: darken($color-complementary-base-4, 20);
+$color-complementary-accent-4: saturate(adjust-color($color-complementary-base-4, $hue:$complementary-accent-hue-handle), 20);
+$color-complementary-highlight-4: lighten(saturate(adjust-color($color-complementary-base-4, $hue:$complementary-highlight-hue-handle), 40),20);
+
+//--- Monochrome Burnt Sienna
+$color-base-5: $burnt-sienna;
+$color-background-5: lighten($color-base-5, 40);
+$color-dark-5: darken($color-base-5, 20);
+$color-accent-5: saturate($color-base-5, 20);
+$color-highlight-5: lighten(saturate($color-base-5, 40),20);
+//--- Analogous Burnt Sienna
+$color-analogous-base-5: $burnt-sienna;
+$color-analogous-background-5: lighten($color-analogous-base-5, 40);
+$color-analogous-dark-5: darken($color-analogous-base-5, 20);
+$color-analogous-accent-5: saturate(adjust-color($color-analogous-base-5, $hue:$analagous-accent-hue-handle), 20);
+$color-analogous-highlight-5: lighten(saturate(adjust-color($color-analogous-base-5, $hue:$analagous-highlight-hue-handle), 40),20);
+//--- Complementary Burnt Sienna
+$color-complementary-base-5: $burnt-sienna;
+$color-complementary-background-5: lighten($color-complementary-base-5, 40);
+$color-complementary-dark-5: darken($color-complementary-base-5, 20);
+$color-complementary-accent-5: saturate(adjust-color($color-complementary-base-5, $hue:$complementary-accent-hue-handle), 20);
+$color-complementary-highlight-5: lighten(saturate(adjust-color($color-complementary-base-5, $hue:$complementary-highlight-hue-handle), 40),20);
+
+//--- Monochrome Brown
+$color-base-6: $brown;
+$color-background-6: lighten($color-base-6, 40);
+$color-dark-6: darken($color-base-6, 20);
+$color-accent-6: saturate($color-base-6, 20);
+$color-highlight-6: lighten(saturate($color-base-6, 40),20);
+//--- Analogous Brown
+$color-analogous-base-6: $brown;
+$color-analogous-background-6: lighten($color-analogous-base-6, 40);
+$color-analogous-dark-6: darken($color-analogous-base-6, 20);
+$color-analogous-accent-6: saturate(adjust-color($color-analogous-base-6, $hue:$analagous-accent-hue-handle), 20);
+$color-analogous-highlight-6: lighten(saturate(adjust-color($color-analogous-base-6, $hue:$analagous-highlight-hue-handle), 40),20);
+//--- Complementary Brown
+$color-complementary-base-6: $brown;
+$color-complementary-background-6: lighten($color-complementary-base-6, 40);
+$color-complementary-dark-6: darken($color-complementary-base-6, 20);
+$color-complementary-accent-6: saturate(adjust-color($color-complementary-base-6, $hue:$complementary-accent-hue-handle), 20);
+$color-complementary-highlight-6: lighten(saturate(adjust-color($color-complementary-base-6, $hue:$complementary-highlight-hue-handle), 40),20);
+
+//--- Monochrome Purple Pink
+$color-base-7: $purple-pink;
+$color-background-7: lighten($color-base-7, 40);
+$color-dark-7: darken($color-base-7, 20);
+$color-accent-7: saturate($color-base-7, 20);
+$color-highlight-7: lighten(saturate($color-base-7, 40),20);
+//--- Analogous Purple Pink
+$color-analogous-base-7: $purple-pink;
+$color-analogous-background-7: lighten($color-analogous-base-7, 40);
+$color-analogous-dark-7: darken($color-analogous-base-7, 20);
+$color-analogous-accent-7: saturate(adjust-color($color-analogous-base-7, $hue:$analagous-accent-hue-handle), 20);
+$color-analogous-highlight-7: lighten(saturate(adjust-color($color-analogous-base-7, $hue:$analagous-highlight-hue-handle), 40),20);
+//--- Complementary Purple Pink
+$color-complementary-base-7: $purple-pink;
+$color-complementary-background-7: lighten($color-complementary-base-7, 40);
+$color-complementary-dark-7: darken($color-complementary-base-7, 20);
+$color-complementary-accent-7: saturate(adjust-color($color-complementary-base-7, $hue:$complementary-accent-hue-handle), 20);
+$color-complementary-highlight-7: lighten(saturate(adjust-color($color-complementary-base-7, $hue:$complementary-highlight-hue-handle), 40),20);
+
+//--- Monochrome Medium Dark Blue
+$color-base-8: $medium-dark-blue;
+$color-background-8: lighten($color-base-8, 40);
+$color-dark-8: darken($color-base-8, 20);
+$color-accent-8: saturate($color-base-8, 20);
+$color-highlight-8: lighten(saturate($color-base-8, 40),20);
+//--- Analogous Medium Dark Blue
+$color-analogous-base-8: $medium-dark-blue;
+$color-analogous-background-8: lighten($color-analogous-base-8, 40);
+$color-analogous-dark-8: darken($color-analogous-base-8, 20);
+$color-analogous-accent-8: saturate(adjust-color($color-analogous-base-8, $hue:$analagous-accent-hue-handle), 20);
+$color-analogous-highlight-8: lighten(saturate(adjust-color($color-analogous-base-8, $hue:$analagous-highlight-hue-handle), 40),20);
+//--- Complementary Medium Dark Blue
+$color-complementary-base-8: $medium-dark-blue;
+$color-complementary-background-8: lighten($color-complementary-base-8, 40);
+$color-complementary-dark-8: darken($color-complementary-base-8, 20);
+$color-complementary-accent-8: saturate(adjust-color($color-complementary-base-8, $hue:$complementary-accent-hue-handle), 20);
+$color-complementary-highlight-8: lighten(saturate(adjust-color($color-complementary-base-8, $hue:$complementary-highlight-hue-handle), 40),20);
+
+//--- Monochrome Warm Gray
+$color-base-9: $warm-gray;
+$color-background-9: lighten($color-base-9, 40);
+$color-dark-9: darken($color-base-9, 20);
+$color-accent-9: saturate($color-base-9, 20);
+$color-highlight-9: lighten(saturate($color-base-9, 40),20);
+//--- Analogous Warm Gray
+$color-analogous-base-9: $warm-gray;
+$color-analogous-background-9: lighten($color-analogous-base-9, 40);
+$color-analogous-dark-9: darken($color-analogous-base-9, 20);
+$color-analogous-accent-9: saturate(adjust-color($color-analogous-base-9, $hue:$analagous-accent-hue-handle), 20);
+$color-analogous-highlight-9: lighten(saturate(adjust-color($color-analogous-base-9, $hue:$analagous-highlight-hue-handle), 40),20);
+//--- Complementary Warm Gray
+$color-complementary-base-9: $warm-gray;
+$color-complementary-background-9: lighten($color-complementary-base-9, 40);
+$color-complementary-dark-9: darken($color-complementary-base-9, 20);
+$color-complementary-accent-9: saturate(adjust-color($color-complementary-base-9, $hue:$complementary-accent-hue-handle), 20);
+$color-complementary-highlight-9: lighten(saturate(adjust-color($color-complementary-base-9, $hue:$complementary-highlight-hue-handle), 40),20);
+
+
+//--- Monochrome Rose Madder
+$color-base-10: $rose-madder;
+$color-background-10: lighten($color-base-10, 40);
+$color-dark-10: darken($color-base-10, 20);
+$color-accent-10: saturate($color-base-10, 20);
+$color-highlight-10: lighten(saturate($color-base-10, 40),20);
+//--- Analogous Rose Madder
+$color-analogous-base-10: $rose-madder;
+$color-analogous-background-10: lighten($color-analogous-base-10, 40);
+$color-analogous-dark-10: darken($color-analogous-base-10, 20);
+$color-analogous-accent-10: saturate(adjust-color($color-analogous-base-10, $hue:$analagous-accent-hue-handle), 20);
+$color-analogous-highlight-10: lighten(saturate(adjust-color($color-analogous-base-10, $hue:$analagous-highlight-hue-handle), 40),20);
+//--- Complementary Rose Madder
+$color-complementary-base-10: $rose-madder;
+$color-complementary-background-10: lighten($color-complementary-base-10, 40);
+$color-complementary-dark-10: darken($color-complementary-base-10, 20);
+$color-complementary-accent-10: saturate(adjust-color($color-complementary-base-10, $hue:$complementary-accent-hue-handle), 20);
+$color-complementary-highlight-10: lighten(saturate(adjust-color($color-complementary-base-10, $hue:$complementary-highlight-hue-handle), 40),20);
+
+//--- Monochrome Orange
+$color-base-11: $orange;
+$color-background-11: lighten($color-base-11, 40);
+$color-dark-11: darken($color-base-11, 20);
+$color-accent-11: saturate($color-base-11, 20);
+$color-highlight-11: lighten(saturate($color-base-11, 40),20);
+//--- Analogous Orange
+$color-analogous-base-11: $orange;
+$color-analogous-background-11: lighten($color-analogous-base-11, 40);
+$color-analogous-dark-11: darken($color-analogous-base-11, 20);
+$color-analogous-accent-11: saturate(adjust-color($color-analogous-base-11, $hue:$analagous-accent-hue-handle), 20);
+$color-analogous-highlight-11: lighten(saturate(adjust-color($color-analogous-base-11, $hue:$analagous-highlight-hue-handle), 40),20);
+//--- Complementary Orange
+$color-complementary-base-11: $orange;
+$color-complementary-background-11: lighten($color-complementary-base-11, 40);
+$color-complementary-dark-11: darken($color-complementary-base-11, 20);
+$color-complementary-accent-11: saturate(adjust-color($color-complementary-base-11, $hue:$complementary-accent-hue-handle), 20);
+$color-complementary-highlight-11: lighten(saturate(adjust-color($color-complementary-base-11, $hue:$complementary-highlight-hue-handle), 40),20);
+
+//--- Monochrome Cerulean Blue
+$color-base-12: $cerulean-blue;
+$color-background-12: lighten($color-base-12, 40);
+$color-dark-12: darken($color-base-12, 20);
+$color-accent-12: saturate($color-base-12, 20);
+$color-highlight-12: lighten(saturate($color-base-12, 40),20);
+//--- Analogous Cerulean Blue
+$color-analogous-base-12: $cerulean-blue;
+$color-analogous-background-12: lighten($color-analogous-base-12, 40);
+$color-analogous-dark-12: darken($color-analogous-base-12, 20);
+$color-analogous-accent-12: saturate(adjust-color($color-analogous-base-12, $hue:$analagous-accent-hue-handle), 20);
+$color-analogous-highlight-12: lighten(saturate(adjust-color($color-analogous-base-12, $hue:$analagous-highlight-hue-handle), 40),20);
+//--- Complementary Cerulean Blue
+$color-complementary-base-12: $cerulean-blue;
+$color-complementary-background-12: lighten($color-complementary-base-12, 40);
+$color-complementary-dark-12: darken($color-complementary-base-12, 20);
+$color-complementary-accent-12: saturate(adjust-color($color-complementary-base-12, $hue:$complementary-accent-hue-handle), 20);
+$color-complementary-highlight-12: lighten(saturate(adjust-color($color-complementary-base-12, $hue:$complementary-highlight-hue-handle), 40),20);
+
+//--- Monochrome Seafoam Green
+$color-base-13: $seafoam-green;
+$color-background-13: lighten($color-base-13, 40);
+$color-dark-13: darken($color-base-13, 20);
+$color-accent-13: saturate($color-base-13, 20);
+$color-highlight-13: lighten(saturate($color-base-13, 40),20);
+//--- Analogous Seafoam Green
+$color-analogous-base-13: $seafoam-green;
+$color-analogous-background-13: lighten($color-analogous-base-13, 40);
+$color-analogous-dark-13: darken($color-analogous-base-13, 20);
+$color-analogous-accent-13: saturate(adjust-color($color-analogous-base-13, $hue:$analagous-accent-hue-handle), 20);
+$color-analogous-highlight-13: lighten(saturate(adjust-color($color-analogous-base-13, $hue:$analagous-highlight-hue-handle), 40),20);
+//--- Complementary Seafoam Green
+$color-complementary-base-13: $seafoam-green;
+$color-complementary-background-13: lighten($color-complementary-base-13, 40);
+$color-complementary-dark-13: darken($color-complementary-base-13, 20);
+$color-complementary-accent-13: saturate(adjust-color($color-complementary-base-13, $hue:$complementary-accent-hue-handle), 20);
+$color-complementary-highlight-13: lighten(saturate(adjust-color($color-complementary-base-13, $hue:$complementary-highlight-hue-handle), 40),20);
+
+
+//--- Monochrome Medium Gray Green
+$color-base-14: $medium-gray-green;
+$color-background-14: lighten($color-base-14, 40);
+$color-dark-14: darken($color-base-14, 20);
+$color-accent-14: saturate($color-base-14, 20);
+$color-highlight-14: lighten(saturate($color-base-14, 40),20);
+//--- Analogous Medium Gray Green
+$color-analogous-base-14: $medium-gray-green;
+$color-analogous-background-14: lighten($color-analogous-base-14, 40);
+$color-analogous-dark-14: darken($color-analogous-base-14, 20);
+$color-analogous-accent-14: saturate(adjust-color($color-analogous-base-14, $hue:$analagous-accent-hue-handle), 20);
+$color-analogous-highlight-14: lighten(saturate(adjust-color($color-analogous-base-14, $hue:$analagous-highlight-hue-handle), 40),20);
+//--- Complementary Medium Gray Green
+$color-complementary-base-14: $medium-gray-green;
+$color-complementary-background-14: lighten($color-complementary-base-14, 40);
+$color-complementary-dark-14: darken($color-complementary-base-14, 20);
+$color-complementary-accent-14: saturate(adjust-color($color-complementary-base-14, $hue:$complementary-accent-hue-handle), 20);
+$color-complementary-highlight-14: lighten(saturate(adjust-color($color-complementary-base-14, $hue:$complementary-highlight-hue-handle), 40),20);
+
+
+//--- Monochrome Raw Sienna
+$color-base-15: $raw-sienna;
+$color-background-15: lighten($color-base-15, 40);
+$color-dark-15: darken($color-base-15, 20);
+$color-accent-15: saturate($color-base-15, 20);
+$color-highlight-15: lighten(saturate($color-base-15, 40),20);
+//--- Analogous Raw Sienna
+$color-analogous-base-15: $raw-sienna;
+$color-analogous-background-15: lighten($color-analogous-base-15, 40);
+$color-analogous-dark-15: darken($color-analogous-base-15, 20);
+$color-analogous-accent-15: saturate(adjust-color($color-analogous-base-15, $hue:$analagous-accent-hue-handle), 20);
+$color-analogous-highlight-15: lighten(saturate(adjust-color($color-analogous-base-15, $hue:$analagous-highlight-hue-handle), 40),20);
+//--- Complementary Raw Sienna
+$color-complementary-base-15: $raw-sienna;
+$color-complementary-background-15: lighten($color-complementary-base-15, 40);
+$color-complementary-dark-15: darken($color-complementary-base-15, 20);
+$color-complementary-accent-15: saturate(adjust-color($color-complementary-base-15, $hue:$complementary-accent-hue-handle), 20);
+$color-complementary-highlight-15: lighten(saturate(adjust-color($color-complementary-base-15, $hue:$complementary-highlight-hue-handle), 40),20);
+
+
+//--- Monochrome Lime Green
+$color-base-16: $lime-green;
+$color-background-16: lighten($color-base-16, 40);
+$color-dark-16: darken($color-base-16, 20);
+$color-accent-16: saturate($color-base-16, 20);
+$color-highlight-16: lighten(saturate($color-base-16, 40),20);
+//--- Analogous Lime Green
+$color-analogous-base-16: $lime-green;
+$color-analogous-background-16: lighten($color-analogous-base-16, 40);
+$color-analogous-dark-16: darken($color-analogous-base-16, 20);
+$color-analogous-accent-16: saturate(adjust-color($color-analogous-base-16, $hue:$analagous-accent-hue-handle), 20);
+$color-analogous-highlight-16: lighten(saturate(adjust-color($color-analogous-base-16, $hue:$analagous-highlight-hue-handle), 40),20);
+//--- Complementary Lime Green
+$color-complementary-base-16: $lime-green;
+$color-complementary-background-16: lighten($color-complementary-base-16, 40);
+$color-complementary-dark-16: darken($color-complementary-base-16, 20);
+$color-complementary-accent-16: saturate(adjust-color($color-complementary-base-16, $hue:$complementary-accent-hue-handle), 20);
+$color-complementary-highlight-16: lighten(saturate(adjust-color($color-complementary-base-16, $hue:$complementary-highlight-hue-handle), 40),20);
+
+
+//--- Monochrome Yellow Ochre
+$color-base-17: $yellow-ochre;
+$color-background-17: lighten($color-base-17, 40);
+$color-dark-17: darken($color-base-17, 20);
+$color-accent-17: saturate($color-base-17, 20);
+$color-highlight-17: lighten(saturate($color-base-17, 40),20);
+//--- Analogous Yellow Ochre
+$color-analogous-base-17: $yellow-ochre;
+$color-analogous-background-17: lighten($color-analogous-base-17, 40);
+$color-analogous-dark-17: darken($color-analogous-base-17, 20);
+$color-analogous-accent-17: saturate(adjust-color($color-analogous-base-17, $hue:$analagous-accent-hue-handle), 20);
+$color-analogous-highlight-17: lighten(saturate(adjust-color($color-analogous-base-17, $hue:$analagous-highlight-hue-handle), 40),20);
+//--- Complementary Yellow Ochre
+$color-complementary-base-17: $yellow-ochre;
+$color-complementary-background-17: lighten($color-complementary-base-17, 40);
+$color-complementary-dark-17: darken($color-complementary-base-17, 20);
+$color-complementary-accent-17: saturate(adjust-color($color-complementary-base-17, $hue:$complementary-accent-hue-handle), 20);
+$color-complementary-highlight-17: lighten(saturate(adjust-color($color-complementary-base-17, $hue:$complementary-highlight-hue-handle), 40),20);
+
+
+//--- Monochrome Cool Gray
+$color-base-18: $cool-gray;
+$color-background-18: lighten($color-base-18, 40);
+$color-dark-18: darken($color-base-18, 20);
+$color-accent-18: saturate($color-base-18, 20);
+$color-highlight-18: lighten(saturate($color-base-18, 40),20);
+//--- Analogous Cool Gray
+$color-analogous-base-18: $cool-gray;
+$color-analogous-background-18: lighten($color-analogous-base-18, 40);
+$color-analogous-dark-18: darken($color-analogous-base-18, 20);
+$color-analogous-accent-18: saturate(adjust-color($color-analogous-base-18, $hue:$analagous-accent-hue-handle), 20);
+$color-analogous-highlight-18: lighten(saturate(adjust-color($color-analogous-base-18, $hue:$analagous-highlight-hue-handle), 40),20);
+//--- Complementary Cool Gray
+$color-complementary-base-18: $cool-gray;
+$color-complementary-background-18: lighten($color-complementary-base-18, 40);
+$color-complementary-dark-18: darken($color-complementary-base-18, 20);
+$color-complementary-accent-18: saturate(adjust-color($color-complementary-base-18, $hue:$complementary-accent-hue-handle), 20);
+$color-complementary-highlight-18: lighten(saturate(adjust-color($color-complementary-base-18, $hue:$complementary-highlight-hue-handle), 40),20);
+
+
+//--- Monochrome Eggshell White
+$color-base-19: $eggshell-white;
+$color-background-19: lighten($color-base-19, 40);
+$color-dark-19: darken($color-base-19, 20);
+$color-accent-19: saturate($color-base-19, 20);
+$color-highlight-19: lighten(saturate($color-base-19, 40),20);
+//--- Analogous Eggshell White
+$color-analogous-base-19: $eggshell-white;
+$color-analogous-background-19: lighten($color-analogous-base-19, 40);
+$color-analogous-dark-19: darken($color-analogous-base-19, 20);
+$color-analogous-accent-19: saturate(adjust-color($color-analogous-base-19, $hue:$analagous-accent-hue-handle), 20);
+$color-analogous-highlight-19: lighten(saturate(adjust-color($color-analogous-base-19, $hue:$analagous-highlight-hue-handle), 40),20);
+//--- Complementary Eggshell White
+$color-complementary-base-19: $eggshell-white;
+$color-complementary-background-19: lighten($color-complementary-base-19, 40);
+$color-complementary-dark-19: darken($color-complementary-base-19, 20);
+$color-complementary-accent-19: saturate(adjust-color($color-complementary-base-19, $hue:$complementary-accent-hue-handle), 20);
+$color-complementary-highlight-19: lighten(saturate(adjust-color($color-complementary-base-19, $hue:$complementary-highlight-hue-handle), 40),20);
+
+
+//--- Monochrome Naples Yellow
+$color-base-20: $naples-yellow;
+$color-background-20: lighten($color-base-20, 40);
+$color-dark-20: darken($color-base-20, 20);
+$color-accent-20: saturate($color-base-20, 20);
+$color-highlight-20: lighten(saturate($color-base-20, 40),20);
+//--- Analogous Naples Yellow
+$color-analogous-base-20: $naples-yellow;
+$color-analogous-background-20: lighten($color-analogous-base-20, 40);
+$color-analogous-dark-20: darken($color-analogous-base-20, 20);
+$color-analogous-accent-20: saturate(adjust-color($color-analogous-base-20, $hue:$analagous-accent-hue-handle), 20);
+$color-analogous-highlight-20: lighten(saturate(adjust-color($color-analogous-base-20, $hue:$analagous-highlight-hue-handle), 40),20);
+//--- Complementary Naples Yellow
+$color-complementary-base-20: $naples-yellow;
+$color-complementary-background-20: lighten($color-complementary-base-20, 40);
+$color-complementary-dark-20: darken($color-complementary-base-20, 20);
+$color-complementary-accent-20: saturate(adjust-color($color-complementary-base-20, $hue:$complementary-accent-hue-handle), 20);
+$color-complementary-highlight-20: lighten(saturate(adjust-color($color-complementary-base-20, $hue:$complementary-highlight-hue-handle), 40),20);
+
+
+//--- Monochrome Peach
+$color-base-21: $peach;
+$color-background-21: lighten($color-base-21, 40);
+$color-dark-21: darken($color-base-21, 20);
+$color-accent-21: saturate($color-base-21, 20);
+$color-highlight-21: lighten(saturate($color-base-21, 40),20);
+//--- Analogous Peach
+$color-analogous-base-21: $peach;
+$color-analogous-background-21: lighten($color-analogous-base-21, 40);
+$color-analogous-dark-21: darken($color-analogous-base-21, 20);
+$color-analogous-accent-21: saturate(adjust-color($color-analogous-base-21, $hue:$analagous-accent-hue-handle), 20);
+$color-analogous-highlight-21: lighten(saturate(adjust-color($color-analogous-base-21, $hue:$analagous-highlight-hue-handle), 40),20);
+//--- Complementary Peach
+$color-complementary-base-21: $peach;
+$color-complementary-background-21: lighten($color-complementary-base-21, 40);
+$color-complementary-dark-21: darken($color-complementary-base-21, 20);
+$color-complementary-accent-21: saturate(adjust-color($color-complementary-base-21, $hue:$complementary-accent-hue-handle), 20);
+$color-complementary-highlight-21: lighten(saturate(adjust-color($color-complementary-base-21, $hue:$complementary-highlight-hue-handle), 40),20);
+
+//--- Monochrome White Smoke
+$color-base-22: $white-smoke;
+$color-background-22: lighten($color-base-22, 40);
+$color-dark-22: darken($color-base-22, 20);
+$color-accent-22: saturate($color-base-22, 20);
+$color-highlight-22: lighten(saturate($color-base-22, 40),20);
+//--- Analogous White Smoke
+$color-analogous-base-22: $white-smoke;
+$color-analogous-background-22: lighten($color-analogous-base-22, 40);
+$color-analogous-dark-22: darken($color-analogous-base-22, 20);
+$color-analogous-accent-22: saturate(adjust-color($color-analogous-base-22, $hue:$analagous-accent-hue-handle), 20);
+$color-analogous-highlight-22: lighten(saturate(adjust-color($color-analogous-base-22, $hue:$analagous-highlight-hue-handle), 40),20);
+//--- Complementary White Smoke
+$color-complementary-base-22: $white-smoke;
+$color-complementary-background-22: lighten($color-complementary-base-22, 40);
+$color-complementary-dark-22: darken($color-complementary-base-22, 20);
+$color-complementary-accent-22: saturate(adjust-color($color-complementary-base-22, $hue:$complementary-accent-hue-handle), 20);
+$color-complementary-highlight-22: lighten(saturate(adjust-color($color-complementary-base-22, $hue:$complementary-highlight-hue-handle), 40),20);
+
+
+// STYLES
+
+// Dark Brown
+.swatch {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  display: inline-block;
+  background: $color-base;
+  &:nth-of-type(2) {
+    background: $color-background;
+  }
+  &:nth-of-type(3) {
+    background: $color-dark;
+  }
+  &:nth-of-type(4) {
+    background: $color-accent;
+  }
+  &:nth-of-type(5) {
+    background: $color-highlight;
+  }
+}
+.analogous {
+  .swatch
+  {
+    background: $color-analogous-base;
+    &:nth-of-type(2) {
+      background: $color-analogous-background;
+    }
+    &:nth-of-type(3) {
+      background: $color-analogous-dark;
+    }
+    &:nth-of-type(4) {
+      background: $color-analogous-accent;
+    }
+    &:nth-of-type(5) {
+      background: $color-analogous-highlight;
+    }
+  }
+}
+
+.complementary {
+  .swatch
+  {
+    background: $color-complementary-base;
+    &:nth-of-type(2) {
+      background: $color-complementary-background;
+    }
+    &:nth-of-type(3) {
+      background: $color-complementary-dark;
+    }
+    &:nth-of-type(4) {
+      background: $color-complementary-accent;
+    }
+    &:nth-of-type(5) {
+      background: $color-complementary-highlight;
+    }
+  }
+}
+
+// Dark Red Brown
+.swatch-1 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  display: inline-block;
+  background: $color-base-1;
+  &:nth-of-type(2) {
+    background: $color-background-1;
+  }
+  &:nth-of-type(3) {
+    background: $color-dark-1;
+  }
+  &:nth-of-type(4) {
+    background: $color-accent-1;
+  }
+  &:nth-of-type(5) {
+    background: $color-highlight-1;
+  }
+}
+.analogous-1 {
+  .swatch-1
+  {
+    background: $color-analogous-base-1;
+    &:nth-of-type(2) {
+      background: $color-analogous-background-1;
+    }
+    &:nth-of-type(3) {
+      background: $color-analogous-dark-1;
+    }
+    &:nth-of-type(4) {
+      background: $color-analogous-accent-1;
+    }
+    &:nth-of-type(5) {
+      background: $color-analogous-highlight-1;
+    }
+  }
+}
+
+.complementary-1 {
+  .swatch-1
+  {
+    background: $color-complementary-base-1;
+    &:nth-of-type(2) {
+      background: $color-complementary-background-1;
+    }
+    &:nth-of-type(3) {
+      background: $color-complementary-dark-1;
+    }
+    &:nth-of-type(4) {
+      background: $color-complementary-accent-1;
+    }
+    &:nth-of-type(5) {
+      background: $color-complementary-highlight-1;
+    }
+  }
+}
+
+// Dark Blue
+.swatch-2 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  display: inline-block;
+  background: $color-base-2;
+  &:nth-of-type(2) {
+    background: $color-background-2;
+  }
+  &:nth-of-type(3) {
+    background: $color-dark-2;
+  }
+  &:nth-of-type(4) {
+    background: $color-accent-2;
+  }
+  &:nth-of-type(5) {
+    background: $color-highlight-2;
+  }
+}
+.analogous-2 {
+  .swatch-2
+  {
+    background: $color-analogous-base-2;
+    &:nth-of-type(2) {
+      background: $color-analogous-background-2;
+    }
+    &:nth-of-type(3) {
+      background: $color-analogous-dark-2;
+    }
+    &:nth-of-type(4) {
+      background: $color-analogous-accent-2;
+    }
+    &:nth-of-type(5) {
+      background: $color-analogous-highlight-2;
+    }
+  }
+}
+
+.complementary-2 {
+  .swatch-2
+  {
+    background: $color-complementary-base-2;
+    &:nth-of-type(2) {
+      background: $color-complementary-background-2;
+    }
+    &:nth-of-type(3) {
+      background: $color-complementary-dark-2;
+    }
+    &:nth-of-type(4) {
+      background: $color-complementary-accent-2;
+    }
+    &:nth-of-type(5) {
+      background: $color-complementary-highlight-2;
+    }
+  }
+}
+
+// Dark Gray Green
+.swatch-3 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  display: inline-block;
+  background: $color-base-3;
+  &:nth-of-type(2) {
+    background: $color-background-3;
+  }
+  &:nth-of-type(3) {
+    background: $color-dark-3;
+  }
+  &:nth-of-type(4) {
+    background: $color-accent-3;
+  }
+  &:nth-of-type(5) {
+    background: $color-highlight-3;
+  }
+}
+.analogous-3 {
+  .swatch-3
+  {
+    background: $color-analogous-base-3;
+    &:nth-of-type(2) {
+      background: $color-analogous-background-3;
+    }
+    &:nth-of-type(3) {
+      background: $color-analogous-dark-3;
+    }
+    &:nth-of-type(4) {
+      background: $color-analogous-accent-3;
+    }
+    &:nth-of-type(5) {
+      background: $color-analogous-highlight-3;
+    }
+  }
+}
+
+.complementary-3 {
+  .swatch-3
+  {
+    background: $color-complementary-base-3;
+    &:nth-of-type(2) {
+      background: $color-complementary-background-3;
+    }
+    &:nth-of-type(3) {
+      background: $color-complementary-dark-3;
+    }
+    &:nth-of-type(4) {
+      background: $color-complementary-accent-3;
+    }
+    &:nth-of-type(5) {
+      background: $color-complementary-highlight-3;
+    }
+  }
+}
+
+// Taupe
+.swatch-4 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  display: inline-block;
+  background: $color-base-4;
+  &:nth-of-type(2) {
+    background: $color-background-4;
+  }
+  &:nth-of-type(3) {
+    background: $color-dark-4;
+  }
+  &:nth-of-type(4) {
+    background: $color-accent-4;
+  }
+  &:nth-of-type(5) {
+    background: $color-highlight-4;
+  }
+}
+.analogous-4 {
+  .swatch-4
+  {
+    background: $color-analogous-base-4;
+    &:nth-of-type(2) {
+      background: $color-analogous-background-4;
+    }
+    &:nth-of-type(3) {
+      background: $color-analogous-dark-4;
+    }
+    &:nth-of-type(4) {
+      background: $color-analogous-accent-4;
+    }
+    &:nth-of-type(5) {
+      background: $color-analogous-highlight-4;
+    }
+  }
+}
+
+.complementary-4 {
+  .swatch-4
+  {
+    background: $color-complementary-base-4;
+    &:nth-of-type(2) {
+      background: $color-complementary-background-4;
+    }
+    &:nth-of-type(3) {
+      background: $color-complementary-dark-4;
+    }
+    &:nth-of-type(4) {
+      background: $color-complementary-accent-4;
+    }
+    &:nth-of-type(5) {
+      background: $color-complementary-highlight-4;
+    }
+  }
+}
+
+// Burnt Sienna
+.swatch-5 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  display: inline-block;
+  background: $color-base-5;
+  &:nth-of-type(2) {
+    background: $color-background-5;
+  }
+  &:nth-of-type(3) {
+    background: $color-dark-5;
+  }
+  &:nth-of-type(4) {
+    background: $color-accent-5;
+  }
+  &:nth-of-type(5) {
+    background: $color-highlight-5;
+  }
+}
+.analogous-5 {
+  .swatch-5
+  {
+    background: $color-analogous-base-5;
+    &:nth-of-type(2) {
+      background: $color-analogous-background-5;
+    }
+    &:nth-of-type(3) {
+      background: $color-analogous-dark-5;
+    }
+    &:nth-of-type(4) {
+      background: $color-analogous-accent-5;
+    }
+    &:nth-of-type(5) {
+      background: $color-analogous-highlight-5;
+    }
+  }
+}
+
+.complementary-5 {
+  .swatch-5
+  {
+    background: $color-complementary-base-5;
+    &:nth-of-type(2) {
+      background: $color-complementary-background-5;
+    }
+    &:nth-of-type(3) {
+      background: $color-complementary-dark-5;
+    }
+    &:nth-of-type(4) {
+      background: $color-complementary-accent-5;
+    }
+    &:nth-of-type(5) {
+      background: $color-complementary-highlight-5;
+    }
+  }
+}
+
+// Brown
+.swatch-6 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  display: inline-block;
+  background: $color-base-6;
+  &:nth-of-type(2) {
+    background: $color-background-6;
+  }
+  &:nth-of-type(3) {
+    background: $color-dark-6;
+  }
+  &:nth-of-type(4) {
+    background: $color-accent-6;
+  }
+  &:nth-of-type(5) {
+    background: $color-highlight-6;
+  }
+}
+.analogous-6 {
+  .swatch-6
+  {
+    background: $color-analogous-base-6;
+    &:nth-of-type(2) {
+      background: $color-analogous-background-6;
+    }
+    &:nth-of-type(3) {
+      background: $color-analogous-dark-6;
+    }
+    &:nth-of-type(4) {
+      background: $color-analogous-accent-6;
+    }
+    &:nth-of-type(5) {
+      background: $color-analogous-highlight-6;
+    }
+  }
+}
+
+.complementary-6 {
+  .swatch-6
+  {
+    background: $color-complementary-base-6;
+    &:nth-of-type(2) {
+      background: $color-complementary-background-6;
+    }
+    &:nth-of-type(3) {
+      background: $color-complementary-dark-6;
+    }
+    &:nth-of-type(4) {
+      background: $color-complementary-accent-6;
+    }
+    &:nth-of-type(5) {
+      background: $color-complementary-highlight-6;
+    }
+  }
+}
+
+
+// Purple Pink
+.swatch-7 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  display: inline-block;
+  background: $color-base-7;
+  &:nth-of-type(2) {
+    background: $color-background-7;
+  }
+  &:nth-of-type(3) {
+    background: $color-dark-7;
+  }
+  &:nth-of-type(4) {
+    background: $color-accent-7;
+  }
+  &:nth-of-type(5) {
+    background: $color-highlight-7;
+  }
+}
+.analogous-7 {
+  .swatch-7
+  {
+    background: $color-analogous-base-7;
+    &:nth-of-type(2) {
+      background: $color-analogous-background-7;
+    }
+    &:nth-of-type(3) {
+      background: $color-analogous-dark-7;
+    }
+    &:nth-of-type(4) {
+      background: $color-analogous-accent-7;
+    }
+    &:nth-of-type(5) {
+      background: $color-analogous-highlight-7;
+    }
+  }
+}
+
+.complementary-7 {
+  .swatch-7
+  {
+    background: $color-complementary-base-7;
+    &:nth-of-type(2) {
+      background: $color-complementary-background-7;
+    }
+    &:nth-of-type(3) {
+      background: $color-complementary-dark-7;
+    }
+    &:nth-of-type(4) {
+      background: $color-complementary-accent-7;
+    }
+    &:nth-of-type(5) {
+      background: $color-complementary-highlight-7;
+    }
+  }
+}
+
+
+// Medium Dark Blue
+.swatch-8 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  display: inline-block;
+  background: $color-base-8;
+  &:nth-of-type(2) {
+    background: $color-background-8;
+  }
+  &:nth-of-type(3) {
+    background: $color-dark-8;
+  }
+  &:nth-of-type(4) {
+    background: $color-accent-8;
+  }
+  &:nth-of-type(5) {
+    background: $color-highlight-8;
+  }
+}
+.analogous-8 {
+  .swatch-8
+  {
+    background: $color-analogous-base-8;
+    &:nth-of-type(2) {
+      background: $color-analogous-background-8;
+    }
+    &:nth-of-type(3) {
+      background: $color-analogous-dark-8;
+    }
+    &:nth-of-type(4) {
+      background: $color-analogous-accent-8;
+    }
+    &:nth-of-type(5) {
+      background: $color-analogous-highlight-8;
+    }
+  }
+}
+
+.complementary-8 {
+  .swatch-8
+  {
+    background: $color-complementary-base-8;
+    &:nth-of-type(2) {
+      background: $color-complementary-background-8;
+    }
+    &:nth-of-type(3) {
+      background: $color-complementary-dark-8;
+    }
+    &:nth-of-type(4) {
+      background: $color-complementary-accent-8;
+    }
+    &:nth-of-type(5) {
+      background: $color-complementary-highlight-8;
+    }
+  }
+}
+
+
+// Warm Gray
+.swatch-9 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  display: inline-block;
+  background: $color-base-9;
+  &:nth-of-type(2) {
+    background: $color-background-9;
+  }
+  &:nth-of-type(3) {
+    background: $color-dark-9;
+  }
+  &:nth-of-type(4) {
+    background: $color-accent-9;
+  }
+  &:nth-of-type(5) {
+    background: $color-highlight-9;
+  }
+}
+.analogous-9 {
+  .swatch-9
+  {
+    background: $color-analogous-base-9;
+    &:nth-of-type(2) {
+      background: $color-analogous-background-9;
+    }
+    &:nth-of-type(3) {
+      background: $color-analogous-dark-9;
+    }
+    &:nth-of-type(4) {
+      background: $color-analogous-accent-9;
+    }
+    &:nth-of-type(5) {
+      background: $color-analogous-highlight-9;
+    }
+  }
+}
+
+.complementary-9 {
+  .swatch-9
+  {
+    background: $color-complementary-base-9;
+    &:nth-of-type(2) {
+      background: $color-complementary-background-9;
+    }
+    &:nth-of-type(3) {
+      background: $color-complementary-dark-9;
+    }
+    &:nth-of-type(4) {
+      background: $color-complementary-accent-9;
+    }
+    &:nth-of-type(5) {
+      background: $color-complementary-highlight-9;
+    }
+  }
+}
+
+// Rose Madder
+.swatch-10 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  display: inline-block;
+  background: $color-base-10;
+  &:nth-of-type(2) {
+    background: $color-background-10;
+  }
+  &:nth-of-type(3) {
+    background: $color-dark-10;
+  }
+  &:nth-of-type(4) {
+    background: $color-accent-10;
+  }
+  &:nth-of-type(5) {
+    background: $color-highlight-10;
+  }
+}
+.analogous-10 {
+  .swatch-10
+  {
+    background: $color-analogous-base-10;
+    &:nth-of-type(2) {
+      background: $color-analogous-background-10;
+    }
+    &:nth-of-type(3) {
+      background: $color-analogous-dark-10;
+    }
+    &:nth-of-type(4) {
+      background: $color-analogous-accent-10;
+    }
+    &:nth-of-type(5) {
+      background: $color-analogous-highlight-10;
+    }
+  }
+}
+
+.complementary-10 {
+  .swatch-10
+  {
+    background: $color-complementary-base-10;
+    &:nth-of-type(2) {
+      background: $color-complementary-background-10;
+    }
+    &:nth-of-type(3) {
+      background: $color-complementary-dark-10;
+    }
+    &:nth-of-type(4) {
+      background: $color-complementary-accent-10;
+    }
+    &:nth-of-type(5) {
+      background: $color-complementary-highlight-10;
+    }
+  }
+}
+
+
+// Orange
+.swatch-11 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  display: inline-block;
+  background: $color-base-11;
+  &:nth-of-type(2) {
+    background: $color-background-11;
+  }
+  &:nth-of-type(3) {
+    background: $color-dark-11;
+  }
+  &:nth-of-type(4) {
+    background: $color-accent-11;
+  }
+  &:nth-of-type(5) {
+    background: $color-highlight-11;
+  }
+}
+.analogous-11 {
+  .swatch-11
+  {
+    background: $color-analogous-base-11;
+    &:nth-of-type(2) {
+      background: $color-analogous-background-11;
+    }
+    &:nth-of-type(3) {
+      background: $color-analogous-dark-11;
+    }
+    &:nth-of-type(4) {
+      background: $color-analogous-accent-11;
+    }
+    &:nth-of-type(5) {
+      background: $color-analogous-highlight-11;
+    }
+  }
+}
+
+.complementary-11 {
+  .swatch-11
+  {
+    background: $color-complementary-base-11;
+    &:nth-of-type(2) {
+      background: $color-complementary-background-11;
+    }
+    &:nth-of-type(3) {
+      background: $color-complementary-dark-11;
+    }
+    &:nth-of-type(4) {
+      background: $color-complementary-accent-11;
+    }
+    &:nth-of-type(5) {
+      background: $color-complementary-highlight-11;
+    }
+  }
+}
+
+// Cerulean Blue
+.swatch-12 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  display: inline-block;
+  background: $color-base-12;
+  &:nth-of-type(2) {
+    background: $color-background-12;
+  }
+  &:nth-of-type(3) {
+    background: $color-dark-12;
+  }
+  &:nth-of-type(4) {
+    background: $color-accent-12;
+  }
+  &:nth-of-type(5) {
+    background: $color-highlight-12;
+  }
+}
+.analogous-12 {
+  .swatch-12
+  {
+    background: $color-analogous-base-12;
+    &:nth-of-type(2) {
+      background: $color-analogous-background-12;
+    }
+    &:nth-of-type(3) {
+      background: $color-analogous-dark-12;
+    }
+    &:nth-of-type(4) {
+      background: $color-analogous-accent-12;
+    }
+    &:nth-of-type(5) {
+      background: $color-analogous-highlight-12;
+    }
+  }
+}
+
+.complementary-12 {
+  .swatch-12
+  {
+    background: $color-complementary-base-12;
+    &:nth-of-type(2) {
+      background: $color-complementary-background-12;
+    }
+    &:nth-of-type(3) {
+      background: $color-complementary-dark-12;
+    }
+    &:nth-of-type(4) {
+      background: $color-complementary-accent-12;
+    }
+    &:nth-of-type(5) {
+      background: $color-complementary-highlight-12;
+    }
+  }
+}
+
+// Seafoam Green
+.swatch-13 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  display: inline-block;
+  background: $color-base-13;
+  &:nth-of-type(2) {
+    background: $color-background-13;
+  }
+  &:nth-of-type(3) {
+    background: $color-dark-13;
+  }
+  &:nth-of-type(4) {
+    background: $color-accent-13;
+  }
+  &:nth-of-type(5) {
+    background: $color-highlight-13;
+  }
+}
+.analogous-13 {
+  .swatch-13
+  {
+    background: $color-analogous-base-13;
+    &:nth-of-type(2) {
+      background: $color-analogous-background-13;
+    }
+    &:nth-of-type(3) {
+      background: $color-analogous-dark-13;
+    }
+    &:nth-of-type(4) {
+      background: $color-analogous-accent-13;
+    }
+    &:nth-of-type(5) {
+      background: $color-analogous-highlight-13;
+    }
+  }
+}
+
+.complementary-13 {
+  .swatch-13
+  {
+    background: $color-complementary-base-13;
+    &:nth-of-type(2) {
+      background: $color-complementary-background-13;
+    }
+    &:nth-of-type(3) {
+      background: $color-complementary-dark-13;
+    }
+    &:nth-of-type(4) {
+      background: $color-complementary-accent-13;
+    }
+    &:nth-of-type(5) {
+      background: $color-complementary-highlight-13;
+    }
+  }
+}
+
+
+// Medium Gray Green
+.swatch-14 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  display: inline-block;
+  background: $color-base-14;
+  &:nth-of-type(2) {
+    background: $color-background-14;
+  }
+  &:nth-of-type(3) {
+    background: $color-dark-14;
+  }
+  &:nth-of-type(4) {
+    background: $color-accent-14;
+  }
+  &:nth-of-type(5) {
+    background: $color-highlight-14;
+  }
+}
+.analogous-14 {
+  .swatch-14
+  {
+    background: $color-analogous-base-14;
+    &:nth-of-type(2) {
+      background: $color-analogous-background-14;
+    }
+    &:nth-of-type(3) {
+      background: $color-analogous-dark-14;
+    }
+    &:nth-of-type(4) {
+      background: $color-analogous-accent-14;
+    }
+    &:nth-of-type(5) {
+      background: $color-analogous-highlight-14;
+    }
+  }
+}
+
+.complementary-14 {
+  .swatch-14
+  {
+    background: $color-complementary-base-14;
+    &:nth-of-type(2) {
+      background: $color-complementary-background-14;
+    }
+    &:nth-of-type(3) {
+      background: $color-complementary-dark-14;
+    }
+    &:nth-of-type(4) {
+      background: $color-complementary-accent-14;
+    }
+    &:nth-of-type(5) {
+      background: $color-complementary-highlight-14;
+    }
+  }
+}
+
+
+// Raw Sienna
+.swatch-15 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  display: inline-block;
+  background: $color-base-15;
+  &:nth-of-type(2) {
+    background: $color-background-15;
+  }
+  &:nth-of-type(3) {
+    background: $color-dark-15;
+  }
+  &:nth-of-type(4) {
+    background: $color-accent-15;
+  }
+  &:nth-of-type(5) {
+    background: $color-highlight-15;
+  }
+}
+.analogous-15 {
+  .swatch-15
+  {
+    background: $color-analogous-base-15;
+    &:nth-of-type(2) {
+      background: $color-analogous-background-15;
+    }
+    &:nth-of-type(3) {
+      background: $color-analogous-dark-15;
+    }
+    &:nth-of-type(4) {
+      background: $color-analogous-accent-15;
+    }
+    &:nth-of-type(5) {
+      background: $color-analogous-highlight-15;
+    }
+  }
+}
+
+.complementary-15 {
+  .swatch-15
+  {
+    background: $color-complementary-base-15;
+    &:nth-of-type(2) {
+      background: $color-complementary-background-15;
+    }
+    &:nth-of-type(3) {
+      background: $color-complementary-dark-15;
+    }
+    &:nth-of-type(4) {
+      background: $color-complementary-accent-15;
+    }
+    &:nth-of-type(5) {
+      background: $color-complementary-highlight-15;
+    }
+  }
+}
+
+
+// Lime Green
+.swatch-16 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  display: inline-block;
+  background: $color-base-16;
+  &:nth-of-type(2) {
+    background: $color-background-16;
+  }
+  &:nth-of-type(3) {
+    background: $color-dark-16;
+  }
+  &:nth-of-type(4) {
+    background: $color-accent-16;
+  }
+  &:nth-of-type(5) {
+    background: $color-highlight-16;
+  }
+}
+.analogous-16 {
+  .swatch-16
+  {
+    background: $color-analogous-base-16;
+    &:nth-of-type(2) {
+      background: $color-analogous-background-16;
+    }
+    &:nth-of-type(3) {
+      background: $color-analogous-dark-16;
+    }
+    &:nth-of-type(4) {
+      background: $color-analogous-accent-16;
+    }
+    &:nth-of-type(5) {
+      background: $color-analogous-highlight-16;
+    }
+  }
+}
+
+.complementary-16 {
+  .swatch-16
+  {
+    background: $color-complementary-base-16;
+    &:nth-of-type(2) {
+      background: $color-complementary-background-16;
+    }
+    &:nth-of-type(3) {
+      background: $color-complementary-dark-16;
+    }
+    &:nth-of-type(4) {
+      background: $color-complementary-accent-16;
+    }
+    &:nth-of-type(5) {
+      background: $color-complementary-highlight-16;
+    }
+  }
+}
+
+
+// Yellow Ochre
+.swatch-17 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  display: inline-block;
+  background: $color-base-17;
+  &:nth-of-type(2) {
+    background: $color-background-17;
+  }
+  &:nth-of-type(3) {
+    background: $color-dark-17;
+  }
+  &:nth-of-type(4) {
+    background: $color-accent-17;
+  }
+  &:nth-of-type(5) {
+    background: $color-highlight-17;
+  }
+}
+.analogous-17 {
+  .swatch-17
+  {
+    background: $color-analogous-base-17;
+    &:nth-of-type(2) {
+      background: $color-analogous-background-17;
+    }
+    &:nth-of-type(3) {
+      background: $color-analogous-dark-17;
+    }
+    &:nth-of-type(4) {
+      background: $color-analogous-accent-17;
+    }
+    &:nth-of-type(5) {
+      background: $color-analogous-highlight-17;
+    }
+  }
+}
+
+.complementary-17 {
+  .swatch-17
+  {
+    background: $color-complementary-base-17;
+    &:nth-of-type(2) {
+      background: $color-complementary-background-17;
+    }
+    &:nth-of-type(3) {
+      background: $color-complementary-dark-17;
+    }
+    &:nth-of-type(4) {
+      background: $color-complementary-accent-17;
+    }
+    &:nth-of-type(5) {
+      background: $color-complementary-highlight-17;
+    }
+  }
+}
+
+
+// Cool Gray
+.swatch-18 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  display: inline-block;
+  background: $color-base-18;
+  &:nth-of-type(2) {
+    background: $color-background-18;
+  }
+  &:nth-of-type(3) {
+    background: $color-dark-18;
+  }
+  &:nth-of-type(4) {
+    background: $color-accent-18;
+  }
+  &:nth-of-type(5) {
+    background: $color-highlight-18;
+  }
+}
+.analogous-18 {
+  .swatch-18
+  {
+    background: $color-analogous-base-18;
+    &:nth-of-type(2) {
+      background: $color-analogous-background-18;
+    }
+    &:nth-of-type(3) {
+      background: $color-analogous-dark-18;
+    }
+    &:nth-of-type(4) {
+      background: $color-analogous-accent-18;
+    }
+    &:nth-of-type(5) {
+      background: $color-analogous-highlight-18;
+    }
+  }
+}
+
+.complementary-18 {
+  .swatch-18
+  {
+    background: $color-complementary-base-18;
+    &:nth-of-type(2) {
+      background: $color-complementary-background-18;
+    }
+    &:nth-of-type(3) {
+      background: $color-complementary-dark-18;
+    }
+    &:nth-of-type(4) {
+      background: $color-complementary-accent-18;
+    }
+    &:nth-of-type(5) {
+      background: $color-complementary-highlight-18;
+    }
+  }
+}
+
+
+// Eggshell White
+.swatch-19 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  display: inline-block;
+  background: $color-base-19;
+  &:nth-of-type(2) {
+    background: $color-background-19;
+  }
+  &:nth-of-type(3) {
+    background: $color-dark-19;
+  }
+  &:nth-of-type(4) {
+    background: $color-accent-19;
+  }
+  &:nth-of-type(5) {
+    background: $color-highlight-19;
+  }
+}
+.analogous-19 {
+  .swatch-19
+  {
+    background: $color-analogous-base-19;
+    &:nth-of-type(2) {
+      background: $color-analogous-background-19;
+    }
+    &:nth-of-type(3) {
+      background: $color-analogous-dark-19;
+    }
+    &:nth-of-type(4) {
+      background: $color-analogous-accent-19;
+    }
+    &:nth-of-type(5) {
+      background: $color-analogous-highlight-19;
+    }
+  }
+}
+
+.complementary-19 {
+  .swatch-19
+  {
+    background: $color-complementary-base-19;
+    &:nth-of-type(2) {
+      background: $color-complementary-background-19;
+    }
+    &:nth-of-type(3) {
+      background: $color-complementary-dark-19;
+    }
+    &:nth-of-type(4) {
+      background: $color-complementary-accent-19;
+    }
+    &:nth-of-type(5) {
+      background: $color-complementary-highlight-19;
+    }
+  }
+}
+
+
+// Naples Yellow
+.swatch-20 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  display: inline-block;
+  background: $color-base-20;
+  &:nth-of-type(2) {
+    background: $color-background-20;
+  }
+  &:nth-of-type(3) {
+    background: $color-dark-20;
+  }
+  &:nth-of-type(4) {
+    background: $color-accent-20;
+  }
+  &:nth-of-type(5) {
+    background: $color-highlight-20;
+  }
+}
+.analogous-20 {
+  .swatch-20
+  {
+    background: $color-analogous-base-20;
+    &:nth-of-type(2) {
+      background: $color-analogous-background-20;
+    }
+    &:nth-of-type(3) {
+      background: $color-analogous-dark-20;
+    }
+    &:nth-of-type(4) {
+      background: $color-analogous-accent-20;
+    }
+    &:nth-of-type(5) {
+      background: $color-analogous-highlight-20;
+    }
+  }
+}
+
+.complementary-20 {
+  .swatch-20
+  {
+    background: $color-complementary-base-20;
+    &:nth-of-type(2) {
+      background: $color-complementary-background-20;
+    }
+    &:nth-of-type(3) {
+      background: $color-complementary-dark-20;
+    }
+    &:nth-of-type(4) {
+      background: $color-complementary-accent-20;
+    }
+    &:nth-of-type(5) {
+      background: $color-complementary-highlight-20;
+    }
+  }
+}
+
+
+// Peach
+.swatch-21 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  display: inline-block;
+  background: $color-base-21;
+  &:nth-of-type(2) {
+    background: $color-background-21;
+  }
+  &:nth-of-type(3) {
+    background: $color-dark-21;
+  }
+  &:nth-of-type(4) {
+    background: $color-accent-21;
+  }
+  &:nth-of-type(5) {
+    background: $color-highlight-21;
+  }
+}
+.analogous-21 {
+  .swatch-21
+  {
+    background: $color-analogous-base-21;
+    &:nth-of-type(2) {
+      background: $color-analogous-background-21;
+    }
+    &:nth-of-type(3) {
+      background: $color-analogous-dark-21;
+    }
+    &:nth-of-type(4) {
+      background: $color-analogous-accent-21;
+    }
+    &:nth-of-type(5) {
+      background: $color-analogous-highlight-21;
+    }
+  }
+}
+
+.complementary-21 {
+  .swatch-21
+  {
+    background: $color-complementary-base-21;
+    &:nth-of-type(2) {
+      background: $color-complementary-background-21;
+    }
+    &:nth-of-type(3) {
+      background: $color-complementary-dark-21;
+    }
+    &:nth-of-type(4) {
+      background: $color-complementary-accent-21;
+    }
+    &:nth-of-type(5) {
+      background: $color-complementary-highlight-21;
+    }
+  }
+}
+
+// White Smoke
+.swatch-22 {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #000;
+  display: inline-block;
+  background: $color-base-22;
+  &:nth-of-type(2) {
+    background: $color-background-22;
+  }
+  &:nth-of-type(3) {
+    background: $color-dark-22;
+  }
+  &:nth-of-type(4) {
+    background: $color-accent-22;
+  }
+  &:nth-of-type(5) {
+    background: $color-highlight-22;
+  }
+}
+.analogous-22 {
+  .swatch-22
+  {
+    background: $color-analogous-base-22;
+    &:nth-of-type(2) {
+      background: $color-analogous-background-22;
+    }
+    &:nth-of-type(3) {
+      background: $color-analogous-dark-22;
+    }
+    &:nth-of-type(4) {
+      background: $color-analogous-accent-22;
+    }
+    &:nth-of-type(5) {
+      background: $color-analogous-highlight-22;
+    }
+  }
+}
+
+.complementary-22 {
+  .swatch-22
+  {
+    background: $color-complementary-base-22;
+    &:nth-of-type(2) {
+      background: $color-complementary-background-22;
+    }
+    &:nth-of-type(3) {
+      background: $color-complementary-dark-22;
+    }
+    &:nth-of-type(4) {
+      background: $color-complementary-accent-22;
+    }
+    &:nth-of-type(5) {
+      background: $color-complementary-highlight-22;
+    }
+  }
+}
